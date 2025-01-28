@@ -23,9 +23,9 @@ function HeroBanner() {
     <div className="h-screen w-full flex justify-center items-center bg-gradient-to-b from-[#001F50] to-[#002E6D]">
       <div className="h-screen w-full flex justify-center items-center bg-black/60 absolute z-10"></div>
       <img
-        src="/bar-black.webp"
+        src="/bg-hero-banner.webp"
         alt=""
-        className="w-full h-screen object-cover absolute z-0"
+        className="w-full h-screen object-cover absolute z-0 rotate"
       />
       <div className="relative z-20 flex flex-col items-center justify-center leading-none">
         <motion.h1
@@ -33,19 +33,19 @@ function HeroBanner() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="text-bigSM lg:text-bigLG text-white font-spaceTransit
-            tracking-wide z-30 drop-shadow-[5px_5px_0_#00A6E6]"
+          className="text-bigSM lg:text-bigLG text-white font-SFBurlington
+            tracking-wide z-30 drop-shadow-[3px_3px_0_#778DA9]"
         >
-          FLORIDABLANCA
+          Hélène Brodin
         </motion.h1>
         <motion.h3
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="z-10 text-white/90 font-spaceTransit lg:text-5xl text-2xl"
+          className="z-10 text-white/90 font-SFBurlington lg:text-2xl text-2xl"
         >
-          Bar a poulpe. Tapas espagnols maison avec vins regionaux.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, harum?
         </motion.h3>
       </div>
     </div>

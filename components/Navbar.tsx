@@ -12,22 +12,21 @@ import {
 import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
+const annimUnderline = "font-Montserrat text-blueDark capitalize inline-block text-2xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
+
+
 const links = [
   {
     label: "accueil",
     href: "/",
   },
   {
-    label: "a propos",
-    href: "/apropos",
+    label: "galerie",
+    href: "/galerie",
   },
   {
-    label: "menu",
-    href: "/menu",
-  },
-  {
-    label: "contact",
-    href: "/contact",
+    label: "objectif line",
+    href: "/objectif-line",
   },
 ];
 
@@ -55,29 +54,26 @@ function Navbar() {
         whileInView="visible"
         viewport={{ once: true, margin: "30%" }}
         variants={Variants}
-        className="fixed w-full h-16 backdrop-blur justify-between items-center text-white px-8 z-50 bg-[#002E6D]/80 hidden lg:flex"
+        className="fixed w-full h-24 backdrop-blur justify-between items-center text-blueDark px-8 z-50 bg-blueSmoked/80 hidden lg:flex"
       >
-        <a href="/" className="h-14 w-14">
-          <img src="/logo-white.webp" alt="logo" />
+        <a href="/">
+          <div className="font-SFBurlington text-4xl px-5 flex flex-col hover:font-bold">
+            <h1 className="leading-none mr-8">hélène</h1>
+            <h1 className="leading-none ml-8">brodin</h1>
+          </div>
         </a>
         <div>
           <li className="flex justify-center space-x-12">
             {links.map((link) => (
               <a
                 href={link.href}
-                className="border-b-[1px] border-transparent leading-none hover:border-b-[1px] hover:border-white text-4xl tracking-wide"
+                className={annimUnderline}
               >
                 {link.label}
               </a>
             ))}
           </li>
         </div>
-        <Link
-          href="/reservation"
-          className="px-3 py-1 bg-white/5 hover:bg-white leading-none cursor-pointer duration-200 text-white hover:text-black text-4xl tracking-wide"
-        >
-          RESERVATION
-        </Link>
       </motion.div>
 
       <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full px-6">
