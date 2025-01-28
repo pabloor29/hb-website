@@ -1,7 +1,6 @@
-import Footer from "../../components/Footer";
-import HeroBanner from "../../components/HeroBanner";
-import MainPage from "../../components/MainPage";
-import Navbar from "../../components/Navbar";
+import Footer from "@/components/Footer";
+import HeroBanner from "@/components/HeroBanner";
+import Navbar from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
@@ -9,7 +8,9 @@ export default function Home() {
     <main className="flex flex-col items-center">
       <Navbar />
       <HeroBanner />
-      <MainPage />
+      <div>
+        
+      </div>
       <Footer />
       <Analytics />
     </main>

@@ -58,14 +58,14 @@ function Navbar() {
         className="fixed w-full h-16 backdrop-blur justify-between items-center text-white px-8 z-50 bg-[#002E6D]/80 hidden lg:flex"
       >
         <a href="/" className="h-14 w-14">
-          <img src="/logo-white.webp" alt="logo de floridablanca" />
+          <img src="/logo-white.webp" alt="logo" />
         </a>
         <div>
           <li className="flex justify-center space-x-12">
             {links.map((link) => (
               <a
                 href={link.href}
-                className="border-b-[1px] border-transparent leading-none hover:border-b-[1px] hover:border-white font-spaceTransit text-4xl tracking-wide"
+                className="border-b-[1px] border-transparent leading-none hover:border-b-[1px] hover:border-white text-4xl tracking-wide"
               >
                 {link.label}
               </a>
@@ -74,7 +74,7 @@ function Navbar() {
         </div>
         <Link
           href="/reservation"
-          className="px-3 py-1 bg-white/5 hover:bg-white leading-none cursor-pointer duration-200 text-white hover:text-black font-spaceTransit text-4xl tracking-wide"
+          className="px-3 py-1 bg-white/5 hover:bg-white leading-none cursor-pointer duration-200 text-white hover:text-black text-4xl tracking-wide"
         >
           RESERVATION
         </Link>
@@ -94,7 +94,7 @@ function Navbar() {
                     href={items.href}
                     className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-[#274b7e] duration-300 px-5 py-3 cursor-pointer"
                   >
-                    <h3 className="font-spaceTransit text-6xl tracking-wide">
+                    <h3 className="text-6xl tracking-wide">
                       {items.label.toUpperCase()}
                     </h3>
                   </a>
@@ -103,7 +103,7 @@ function Navbar() {
                   href="/reservation"
                   className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-[#274b7e] duration-300 px-5 py-3 cursor-pointer"
                 >
-                  <h3 className="font-spaceTransit text-6xl tracking-wide">
+                  <h3 className="text-6xl tracking-wide">
                     RESERVATION
                   </h3>
                 </a>
@@ -115,7 +115,7 @@ function Navbar() {
           href="/reservation"
           className="shadow cursor-pointer overflow-hidden h-10 px-3 rounded-full bg-white flex items-center justify-center"
         >
-          <h3 className="font-spaceTransit text-3xl tracking-wide text-[#002E6D]">reserver</h3>
+          <h3 className="text-3xl tracking-wide text-[#002E6D]">reserver</h3>
         </a>
         {/* <a href="/reservation" className="shadow cursor-pointer overflow-hidden w-10 h-10 rounded-full bg-white flex items-center justify-center">
           <Utensils />
