@@ -53,6 +53,7 @@ function Galerie() {
           isOpen={!!selectedArtwork}
           onClose={() => setSelectedArtwork(null)}
           title={selectedArtwork.title}
+          artist={selectedArtwork.artist}
           description={selectedArtwork.description}
           images={[selectedArtwork.imageUrl, ...(selectedArtwork.additionalImages || [])]}
         />

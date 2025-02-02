@@ -10,6 +10,7 @@ interface ArtworkProps {
   imageUrl: string;
   description: string;
   additionalImages?: string[];
+  onOpen: () => void;
 }
 
 const ArtworkCard: React.FC<ArtworkProps> = ({ title, artist, imageUrl, description, additionalImages = [] }) => {
