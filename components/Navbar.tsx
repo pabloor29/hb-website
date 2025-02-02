@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
+
 const annimUnderline = "font-Montserrat text-blueDark capitalize inline-block text-2xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
 
 
@@ -81,7 +82,7 @@ function Navbar() {
           <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full shadow">
             <img src="/menu-2-line.png" alt="hamburger menu icon" />
           </SheetTrigger>
-          <SheetContent className="bg-blueSmoked">
+          <SheetContent className="fixed z-50 gap-4 bg-blueSmoked p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 left-0 h-full w-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm">
             <SheetHeader>
               <SheetDescription className="flex flex-col">
                 {links.map((items) => (
