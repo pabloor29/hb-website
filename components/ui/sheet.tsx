@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
@@ -13,18 +13,11 @@ const SheetTrigger = SheetPrimitive.Trigger
 
 const SheetClose = SheetPrimitive.Close
 
-// Étendre DialogPortalProps pour accepter className
-interface SheetPortalProps extends Omit<SheetPrimitive.DialogPortalProps, 'className'> {
-  className?: string;
-}
-
 const SheetPortal = ({
   className,
   ...props
-}: SheetPortalProps) => (
-  <SheetPrimitive.Portal {...props}>
-    <div className={cn(className)} />
-  </SheetPrimitive.Portal>
+}: SheetPrimitive.DialogPortalProps) => (
+  <SheetPrimitive.Portal className={cn(className)} {...props} />
 )
 SheetPortal.displayName = SheetPrimitive.Portal.displayName
 
@@ -70,7 +63,7 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "left", className, children, ...props }, ref) => (
-  <SheetPortal className={className}>
+  <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
