@@ -13,8 +13,8 @@ const SheetTrigger = SheetPrimitive.Trigger
 
 const SheetClose = SheetPrimitive.Close
 
-// Étendre les props de DialogPortalProps pour inclure className
-interface SheetPortalProps extends SheetPrimitive.DialogPortalProps {
+// Étendre DialogPortalProps pour accepter className
+interface SheetPortalProps extends Omit<SheetPrimitive.DialogPortalProps, 'className'> {
   className?: string;
 }
 
@@ -22,7 +22,9 @@ const SheetPortal = ({
   className,
   ...props
 }: SheetPortalProps) => (
-  <SheetPrimitive.Portal className={cn(className)} {...props} />
+  <SheetPrimitive.Portal {...props}>
+    <div className={cn(className)} />
+  </SheetPrimitive.Portal>
 )
 SheetPortal.displayName = SheetPrimitive.Portal.displayName
 
@@ -68,7 +70,7 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "left", className, children, ...props }, ref) => (
-  <SheetPortal>
+  <SheetPortal className={className}>
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
