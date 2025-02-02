@@ -78,44 +78,27 @@ function Navbar() {
 
       <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full px-6">
         <Sheet key="left">
-          <SheetTrigger className="overflow-hidden w-10 h-10 rounded-full shadow">
-            <img src="/hamburger-menu.png" alt="hamburger menu icon" />
+          <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full shadow">
+            <img src="/menu-2-line.png" alt="hamburger menu icon" />
           </SheetTrigger>
-          <SheetContent className="bg-[#002E6D]">
+          <SheetContent className="bg-blueSmoked">
             <SheetHeader>
               <SheetDescription className="flex flex-col">
                 {links.map((items) => (
                   <a
                     key={items.label}
                     href={items.href}
-                    className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-[#274b7e] duration-300 px-5 py-3 cursor-pointer"
+                    className="overflow-hidden h-20 w-4/5 flex items-center text-blueDark hover:bg-blueDark hover:text-blueSmoked rounded-xl duration-300 px-5 py-3 cursor-pointer"
                   >
-                    <h3 className="text-6xl tracking-wide">
+                    <h3 className="text-2xl font-Montserrat tracking-wide">
                       {items.label.toUpperCase()}
                     </h3>
                   </a>
                 ))}
-                <a
-                  href="/reservation"
-                  className="overflow-hidden h-20 w-4/5 flex items-center text-white hover:bg-[#274b7e] duration-300 px-5 py-3 cursor-pointer"
-                >
-                  <h3 className="text-6xl tracking-wide">
-                    RESERVATION
-                  </h3>
-                </a>
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
         </Sheet>
-        <a
-          href="/reservation"
-          className="shadow cursor-pointer overflow-hidden h-10 px-3 rounded-full bg-white flex items-center justify-center"
-        >
-          <h3 className="text-3xl tracking-wide text-[#002E6D]">reserver</h3>
-        </a>
-        {/* <a href="/reservation" className="shadow cursor-pointer overflow-hidden w-10 h-10 rounded-full bg-white flex items-center justify-center">
-          <Utensils />
-        </a> */}
       </div>
     </nav>
   );
