@@ -25,7 +25,8 @@ module.exports = {
       "9xl": "8rem",
     },
     fontFamily: {
-      spaceTransit: ["SpaceTransit", "ui-serif"],
+      SFBurlington: ["SF Burlington Script SC Italic V1 V1", "ui-serif"],
+      Montserrat: ["Montserrat", "ui-serif"],
     },
     container: {
       center: true,
@@ -41,39 +42,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        greyBG: '#778da9',
+        blueSmoked: '#778DA9',
+        blueDark: '#0D1B2A',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -98,4 +69,3 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 };
-
