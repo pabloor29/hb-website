@@ -8,9 +8,6 @@ export default function Home() {
     <main className="flex flex-col items-center">
       <Navbar />
       <HeroBanner />
-      <div>
-        
-      </div>
       <Footer />
       <Analytics />
     </main>
