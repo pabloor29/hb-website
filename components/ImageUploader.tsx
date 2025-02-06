@@ -49,8 +49,9 @@ const ImageGrid = () => {
   }, []);
 
   const handleImageUpload = (index: number, event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files[0];
-    if (file) {
+    const files = event.target.files;
+    if (files && files[0]) {
+      const file = files[0];
       const url = URL.createObjectURL(file);
       const newImages = [...images];
       newImages[index] = url;
