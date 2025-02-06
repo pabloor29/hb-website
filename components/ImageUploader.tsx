@@ -48,7 +48,7 @@ const ImageGrid = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleImageUpload = (index, event) => {
+  const handleImageUpload = (index: number, event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files[0];
     if (file) {
       const url = URL.createObjectURL(file);
@@ -58,7 +58,7 @@ const ImageGrid = () => {
     }
   };
 
-  const handleRemoveImage = (index) => {
+  const handleRemoveImage = (index: number) => {
     const newImages = [...images];
     newImages[index] = null;
     setImages(newImages);
