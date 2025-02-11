@@ -6,7 +6,7 @@ function Footer() {
     <footer className="w-full bg-blueSmoked flex flex-col justify-center items-center">
       <div className="flex flex-col lg:flex-row w-5/6 lg:justify-between justify-center items-center p-4 space-y-12 lg:space-y-0">
         <div className="lg:w-1/3 w-full text-blueDark flex flex-col items-center justify-center">
-          <h4 className="font-Montserrat text-3xl mb-3">Hélène Brodin</h4>
+          <h4 className="font-Montserrat text-3xl mb-3">Hélène B.B</h4>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem deserunt nam et, odit necessitatibus iusto officia ex amet consequuntur autem maxime fugit eveniet totam soluta! Nemo et officiis, ut impedit deleniti nobis id sequi ad omnis eum minima, odit minus!</p>
         </div>
 
@@ -27,17 +27,19 @@ function Footer() {
           <ul className="flex flex-col items-center justify-center">
             <li className="flex gap-2 mb-3 hover:underline">
               <Mail />
-              <a href="mailto:">
-                example@gmail.com
+              <a href="mailto:helenebrodin@yahoo.fr">
+              helenebrodin@yahoo.fr
               </a>
             </li>
             <li className="flex gap-2 mb-3 hover:underline">
               <Phone />
-              <a href="tel:+33"></a>
+              <a href="tel:+33616547457">
+                +33 6 16 54 74 57
+              </a>
             </li>
             <li className="flex gap-2 mb-3 hover:underline">
               <Instagram />
-              <a href="/">@insta</a>
+              <a href="https://www.instagram.com/brodin.helene/">@brodin.helene</a>
             </li>
             <li className="flex gap-2 mb-3 hover:underline"></li>
           </ul>
@@ -45,7 +47,7 @@ function Footer() {
 
         <div className="font-SFBurlington text-5xl px-5 flex flex-col text-blueDark">
             <h1 className="leading-none mr-8">hélène</h1>
-            <h1 className="leading-none ml-8">brodin</h1>
+            <h1 className="leading-none ml-8">b.b</h1>
           </div>
       </div>
 

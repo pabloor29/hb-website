@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
 
-const annimUnderline = "font-Montserrat text-blueDark capitalize inline-block text-2xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
+const annimUnderline = "font-Montserrat text-blueDark capitalize inline-block text-xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
 
 
 const links = [
@@ -26,8 +26,16 @@ const links = [
     href: "/galerie",
   },
   {
-    label: "objectif line",
-    href: "/objectif-line",
+    label: "tableau de visualisation",
+    href: "/tableau-de-visualisation",
+  },
+  {
+    label: "Communication animale",
+    href: "/communication-animale",
+  },
+  {
+    label: "Me contacter",
+    href: "/me-contacter",
   },
 ];
 
@@ -58,9 +66,9 @@ function Navbar() {
         className="fixed w-full h-24 backdrop-blur justify-between items-center text-blueDark px-8 z-50 bg-blueSmoked/80 hidden lg:flex"
       >
         <a href="/">
-          <div className="font-SFBurlington text-4xl px-5 flex flex-col hover:font-bold">
-            <h1 className="leading-none mr-8">hélène</h1>
-            <h1 className="leading-none ml-8">brodin</h1>
+          <div className="font-SFBurlington text-4xl px-5 flex flex-col text-center hover:font-bold">
+            <h1 className="leading-none">hélène</h1>
+            <h1 className="leading-none">b.b</h1>
           </div>
         </a>
         <div>

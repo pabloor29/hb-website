@@ -8,8 +8,12 @@ function ObjectifLineConception() {
   return (
     <>
     <Navbar />
-    <CustomHeroBanner title="Objectif Line Conception" img="/"  />
     <ImageGrid />
+    <div className="flex justify-center items-center text-2xl mb-20">
+      <p>
+        Prenez une capture d'écran pour sauvegrader !
+      </p>
+    </div>
     <Footer />
     </>
   );

@@ -68,7 +68,7 @@ const ImageGrid = () => {
   const positions = isMobile ? mobilePositions : desktopPositions; // Choisir le bon tableau de positions
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center pt-40 mb-10">
       <div className="relative w-[375px] h-[375px] md:w-[600px] md:h-[600px] bg-[url('/art/Poisson-02.jpeg')] bg-cover rounded-xl">
         <div className="bg-white h-full w-full bg-opacity-30">
           {/* SVG pour dessiner le chemin */}

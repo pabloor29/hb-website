@@ -36,7 +36,7 @@ function HeroBanner() {
           className="text-bigSM lg:text-bigLG text-white font-SFBurlington
             tracking-wide z-30 drop-shadow-[3px_3px_0_#778DA9]"
         >
-          Hélène Brodin
+          Hélène B.B
         </motion.h1>
         <motion.h3
           initial="hidden"
