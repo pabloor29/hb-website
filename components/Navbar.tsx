@@ -13,20 +13,20 @@ import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
 
-const annimUnderline = "font-Montserrat text-blueDark capitalize inline-block text-xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
+const annimUnderline = "font-Montserrat text-blueDark inline-block text-xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
 
 
 const links = [
   {
-    label: "accueil",
+    label: "Accueil",
     href: "/",
   },
   {
-    label: "galerie",
+    label: "Galerie",
     href: "/galerie",
   },
   {
-    label: "tableau de visualisation",
+    label: "Tableau de visualisation",
     href: "/tableau-de-visualisation",
   },
   {
