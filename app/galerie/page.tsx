@@ -22,16 +22,16 @@ function Galerie() {
     {
       title: "Le loup",
       artist: "Lorem ipsum dolor sit amet.",
-      imageUrl: "/art/Loup-01.jpeg",
+      imageUrl: "/art/Loup/Loup-01.jpeg",
       description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis harum, tempore totam voluptas vero odit molestias architecto neque saepe nulla! Possimus nam temporibus, vel libero dolores quia ea fugiat ab alias quidem. Quis sapiente, accusamus neque obcaecati cum dolore commodi impedit officiis laboriosam temporibus. Saepe nam hic veritatis laudantium, expedita blanditiis incidunt quia exercitationem quisquam optio sequi non repellat adipisci itaque, porro nisi natus nemo labore minus? Nobis et ipsam praesentium eius unde vel earum itaque tenetur voluptatibus, aut at officia placeat cum necessitatibus maxime nesciunt ea odio labore eligendi! Odit consequuntur vitae facilis assumenda quos sunt repudiandae labore qui?",
-      additionalImages: ["/art/Loup-02.jpeg"], 
+      additionalImages: ["/art/Loup/Loup-02.jpeg"], 
     },
     {
       title: "Le poisson",
       artist: "Lorem ipsum dolor sit amet.",
-      imageUrl: "/art/Poisson-01.jpeg",
+      imageUrl: "/art/Poisson/Poisson-01.jpeg",
       description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, aut accusantium, earum alias odio, id autem amet a sint animi dolor accusamus quidem commodi ea unde ullam dignissimos placeat temporibus harum quas aperiam assumenda. Porro ipsa et harum, voluptatem officia, culpa libero laborum ex excepturi optio itaque animi nemo maxime.",
-      additionalImages: ["/art/Poisson-02.jpeg", "/art/Poisson-03.jpeg"],
+      additionalImages: ["/art/Poisson/Poisson-02.jpeg", "/art/Poisson/Poisson-03.jpeg"],
     },
   ];
 

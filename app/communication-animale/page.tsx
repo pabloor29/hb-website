@@ -20,12 +20,12 @@ function ComAnimale() {
               </p>
             </div>
             <div className="w-6/7 md:w-1/3">
-              <img className="shadow-2xl" src="/art/Loup-01.jpeg" alt="" />
+              <img className="shadow-2xl" src="/art/Loup/Loup-01.jpeg" alt="" />
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:gap-40 gap-10 mx-10 my-14">
             <div className="w-6/7 md:w-1/3">
-              <img className="shadow-2xl" src="/art/Poisson-01.jpeg" alt="" />
+              <img className="shadow-2xl" src="/art/Poisson/Poisson-01.jpeg" alt="" />
             </div>
             <div className="w-6/7 md:w-1/3">
               <h2 className="font-SFBurlington text-4xl mb-8">Ma méthode</h2>

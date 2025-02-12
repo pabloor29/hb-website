@@ -16,7 +16,7 @@ function ObjectifLine() {
             </p>
           </div>
           <div className="md:w-1/3">
-            <img src="/art/Loup-01.jpeg" alt="" className="shadow-2xl"/>
+            <img src="/art/Loup/Loup-01.jpeg" alt="" className="shadow-2xl"/>
           </div>
         </div>
         <div className="mb-20 text-center">

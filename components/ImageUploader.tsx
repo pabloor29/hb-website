@@ -69,7 +69,7 @@ const ImageGrid = () => {
 
   return (
     <div className="flex justify-center items-center pt-40 mb-10">
-      <div className="relative w-[375px] h-[375px] md:w-[600px] md:h-[600px] bg-[url('/art/Poisson-02.jpeg')] bg-cover rounded-xl">
+      <div className="relative w-[375px] h-[375px] md:w-[600px] md:h-[600px] bg-[url('/art/Poisson/Poisson-02.jpeg')] bg-cover rounded-xl">
         <div className="bg-white h-full w-full bg-opacity-30">
           {/* SVG pour dessiner le chemin */}
           <svg width="100%" height="100%" className="absolute top-0 left-0">
