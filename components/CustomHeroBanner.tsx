@@ -33,7 +33,7 @@ function CustomHeroBanner(props: any) {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="text-8xl lg:text-bigLG text-white font-SFBurlington
+          className="text-7xl lg:text-bigLG text-white font-SFBurlington
             tracking-wide z-40 drop-shadow-[3px_3px_0_#778DA9]"
         >
           {props.title}

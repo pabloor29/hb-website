@@ -97,10 +97,10 @@ function Navbar() {
                   <a
                     key={items.label}
                     href={items.href}
-                    className="overflow-hidden h-20 w-4/5 flex items-center text-blueDark hover:bg-blueDark hover:text-blueSmoked rounded-xl
+                    className="overflow-hidden h-20 w-full flex items-center text-blueDark hover:bg-blueDark hover:text-blueSmoked rounded-xl
                      duration-300 px-5 py-3 cursor-pointer"
                   >
-                    <h3 className="text-2xl font-Montserrat tracking-wide">
+                    <h3 className="w-full text-xl text-left font-Montserrat tracking-wid">
                       {items.label.toUpperCase()}
                     </h3>
                   </a>

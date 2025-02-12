@@ -25,7 +25,7 @@ function MeContacter() {
 
       const [formDataTabVisu, setFormDataTabVisu] = useState({
         email: "",
-        fichier: "",
+        fichier: null,
         nom: "",
         citation: "",
         message: "",
@@ -35,17 +35,39 @@ function MeContacter() {
         email: "",
         message: "",
       });
+
+      const handleFileChange = (e: any) => {
+        setFormDataTabVisu({
+            ...formDataTabVisu,
+            fichier: e.target.files[0], // Stocke le fichier sélectionné
+        });
+    };
     
     
-    const handleChange = (e: any) => {
+    const handleChangeComAnimale = (e: any) => {
         const { name, value } = e.target;
         setFormDataComAnimale({
           ...formDataComAnimale,
           [name]: value,
         });
-    
-        console.log(formDataComAnimale.eventDate);
       };
+
+      const handleChangeTabVisu = (e: any) => {
+        const { name, value } = e.target;
+        setFormDataTabVisu({
+          ...formDataTabVisu,
+          [name]: value,
+        });
+      };
+
+      const handleChangeMessage = (e: any) => {
+        const { name, value } = e.target;
+        setFormDataMessage({
+          ...formDataTabVisu,
+          [name]: value,
+        });
+      };
+
     
     const isWeekday = (date: any) => {
         const day = date.getDay();
@@ -107,27 +129,43 @@ function MeContacter() {
         setSucceeded(true);
       };
 
-      const handleSubmitTabVisu = (e: any) => {
+      const handleSubmitTabVisu = async (e: any) => {
         e.preventDefault();
     
         const {
-          email,
-          fichier,
-          nom,
-          citation,
-          message,
+            email,
+            fichier,
+            nom,
+            citation,
+            message,
         } = formDataTabVisu;
     
-        const mailTo = "pab.ortg@gmail.com";
-        const subject = `Tableau de Visualisation - ${nom}`;
-        const body = `Citation: ${citation}\n\n${message}`;
+        if (!fichier) {
+            alert("Veuillez ajouter une image.");
+            return;
+        }
     
-        window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(
-          subject
-        )}&body=${encodeURIComponent(body)}`;
+        // Convertir le fichier en base64
+        const reader = new FileReader();
+        reader.readAsDataURL(fichier);
+        reader.onload = () => {
+            const imageBase64 = reader.result as string;
+    
+            const mailTo = "pab.ortg@gmail.com";
+            const subject = `Tableau de Visualisation - ${nom}`;
+            const body = `Nom: ${nom}\nEmail: ${email}\n\nCitation: ${citation}\n\nMessage:\n${message}\n\nImage: ${imageBase64}`;
+    
+            window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        };
+        
+        reader.onerror = (error) => {
+            console.error("Erreur lors de la conversion de l'image :", error);
+            alert("Erreur lors du traitement de l'image.");
+        };
     
         setSucceeded(true);
-      };
+    };
+    
 
       const handleSubmitMessage = (e: any) => {
         e.preventDefault();
@@ -172,7 +210,7 @@ function MeContacter() {
                         id="animal"
                         name="animal"
                         value={formDataComAnimale.animal}
-                        onChange={handleChange}
+                        onChange={handleChangeComAnimale}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         required
                     />
@@ -190,7 +228,7 @@ function MeContacter() {
                         id="nom"
                         name="nom"
                         value={formDataComAnimale.nom}
-                        onChange={handleChange}
+                        onChange={handleChangeComAnimale}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         required
                     />
@@ -208,14 +246,13 @@ function MeContacter() {
                         id="email"
                         name="email"
                         value={formDataComAnimale.email}
-                        onChange={handleChange}
+                        onChange={handleChangeComAnimale}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         required
                     />
                     </div>
 
-                    <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-10 space-y-8 lg:space-y-0">
-                    <div className="lg:w-1/2 w-full">
+                    <div className="w-full">
                         <label
                         htmlFor="age"
                         className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
@@ -227,26 +264,26 @@ function MeContacter() {
                         id="age"
                         name="age"
                         value={formDataComAnimale.age}
-                        onChange={handleChange}
+                        onChange={handleChangeComAnimale}
                         min={1}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         required
                         />
                     </div>
 
-                    <div className="lg:w-1/2 w-full">
+                    <div className="w-full">
                         <label
                         htmlFor="eventDate"
                         className="w-full block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
                         >
-                        Date
+                        Date de Rendez-vous
                         </label>
 
                         <DatePicker
                         showTimeSelect
                         selected={formDataComAnimale.eventDate}
                         onChange={(date: any) =>
-                            handleChange({
+                            handleChangeComAnimale({
                             target: { name: "eventDate", value: date },
                             })
                         }
@@ -256,7 +293,6 @@ function MeContacter() {
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         locale="fr"
                         />
-                    </div>
                     </div>
 
                     <div>
@@ -271,7 +307,7 @@ function MeContacter() {
                         name="message"
                         rows={4}
                         value={formDataComAnimale.message}
-                        onChange={handleChange}
+                        onChange={handleChangeComAnimale}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                     />
                     </div>
@@ -286,15 +322,116 @@ function MeContacter() {
             </div>
         </div>,
         "Tableau de Visualisation":
-        <div className="">
+        <div className="w-full">
             <h1 className="font-SFBurlington text-3xl">Tableau de Visualisation</h1>
+            <div className="relative flex flex-col lg:flex-row justify-center items-center lg:space-x-20 space-y-8 py-4">
+                <form
+                    onSubmit={handleSubmitTabVisu}
+                    className="space-y-8 lg:w-1/3 w-full z-20"
+                >
+                    <div>
+                    <label
+                        htmlFor="nom"
+                        className="block text-xl font-medium text-black font-ttInterphasesMono tracking-wide"
+                    >
+                        Nom
+                    </label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        value={formDataTabVisu.nom}
+                        onChange={handleChangeTabVisu}
+                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                        required
+                    />
+                    </div>
+
+                    <div>
+                    <label
+                        htmlFor="email"
+                        className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
+                    >
+                        Email
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formDataTabVisu.email}
+                        onChange={handleChangeTabVisu}
+                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                        required
+                    />
+                    </div>
+
+                    <div>
+                        <label
+                            htmlFor="fichier"
+                            className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
+                        >
+                            Mon tableau de visualisation
+                        </label>
+                        <input
+                            type="file"
+                            id="fichier"
+                            name="fichier"
+                            accept="image/*"
+                            onChange={handleFileChange}
+                            className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                    <label
+                        htmlFor="citation"
+                        className="block text-xl font-medium text-black font-ttInterphasesMono tracking-wide"
+                    >
+                        Citation
+                    </label>
+                    <textarea
+                        id="citation"
+                        name="citation"
+                        rows={2}
+                        value={formDataTabVisu.citation}
+                        onChange={handleChangeTabVisu}
+                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                    />
+                    </div>
+
+                    <div>
+                    <label
+                        htmlFor="message"
+                        className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
+                    >
+                        Message
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        value={formDataTabVisu.message}
+                        onChange={handleChangeTabVisu}
+                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                    />
+                    </div>
+
+                    <button
+                    type="submit"
+                    className="w-full bg-blueDark rounded-xl py-3 text-lg font-semibold text-white border-b-4 border-blueSmoked hover:bg-blueSmoked duration-300 cursor-pointer"
+                    >
+                    Commander mon tableau de visualisation
+                    </button>
+                </form>
+            </div>
         </div>,
         "Message":
         <div className="">
             <h1 className="font-SFBurlington text-3xl">Message</h1>
             <div className="relative flex flex-col lg:flex-row justify-center items-center lg:space-x-20 space-y-8 py-4">
                 <form
-                    onSubmit={handleSubmitComAnimale}
+                    onSubmit={handleSubmitMessage}
                     className="space-y-8 lg:w-1/3 w-full z-20"
                 >
                     <div>
@@ -308,8 +445,8 @@ function MeContacter() {
                         type="email"
                         id="email"
                         name="email"
-                        value={formDataComAnimale.email}
-                        onChange={handleChange}
+                        value={formDataMessage.email}
+                        onChange={handleChangeMessage}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                         required
                     />
@@ -326,8 +463,8 @@ function MeContacter() {
                         id="message"
                         name="message"
                         rows={4}
-                        value={formDataComAnimale.message}
-                        onChange={handleChange}
+                        value={formDataMessage.message}
+                        onChange={handleChangeMessage}
                         className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
                     />
                     </div>
