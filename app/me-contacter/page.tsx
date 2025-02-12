@@ -4,7 +4,8 @@ import CustomHeroBanner from '@/components/CustomHeroBanner';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import React from 'react'
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation"; 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -25,24 +26,15 @@ function MeContacter() {
 
       const [formDataTabVisu, setFormDataTabVisu] = useState({
         email: "",
-        fichier: null,
         nom: "",
-        citation: "",
         message: "",
       });
 
       const [formDataMessage, setFormDataMessage] = useState({
         email: "",
+        nom: "",
         message: "",
-      });
-
-      const handleFileChange = (e: any) => {
-        setFormDataTabVisu({
-            ...formDataTabVisu,
-            fichier: e.target.files[0], // Stocke le fichier sélectionné
-        });
-    };
-    
+      });    
     
     const handleChangeComAnimale = (e: any) => {
         const { name, value } = e.target;
@@ -120,7 +112,7 @@ function MeContacter() {
     
         const mailTo = "pab.ortg@gmail.com";
         const subject = `Communication Animale - Le ${eventDate}`;
-        const body = `Animal: ${animal}\nNom: ${nom}\nAge: ${age}\nDate: ${eventDate}\n\n${message}`;
+        const body = `Email: ${email}\nAnimal: ${animal}\nNom: ${nom}\nAge: ${age}\nDate: ${eventDate}\n\n${message}`;
     
         window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(
           subject
@@ -129,55 +121,38 @@ function MeContacter() {
         setSucceeded(true);
       };
 
-      const handleSubmitTabVisu = async (e: any) => {
+      const handleSubmitTabVisu = (e: any) => {
         e.preventDefault();
-    
+
         const {
-            email,
-            fichier,
-            nom,
-            citation,
-            message,
+          email,
+          nom,
+          message,
         } = formDataTabVisu;
     
-        if (!fichier) {
-            alert("Veuillez ajouter une image.");
-            return;
-        }
+        const mailTo = "pab.ortg@gmail.com";
+        const subject = `Tableau de Visualisation - ${nom}`;
+        const body = `E-mail: ${email}\nNom: ${nom}\n\n${message}`;
     
-        // Convertir le fichier en base64
-        const reader = new FileReader();
-        reader.readAsDataURL(fichier);
-        reader.onload = () => {
-            const imageBase64 = reader.result as string;
-    
-            const mailTo = "pab.ortg@gmail.com";
-            const subject = `Tableau de Visualisation - ${nom}`;
-            const body = `Nom: ${nom}\nEmail: ${email}\n\nCitation: ${citation}\n\nMessage:\n${message}\n\nImage: ${imageBase64}`;
-    
-            window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        };
-        
-        reader.onerror = (error) => {
-            console.error("Erreur lors de la conversion de l'image :", error);
-            alert("Erreur lors du traitement de l'image.");
-        };
+        window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`;
     
         setSucceeded(true);
-    };
-    
+      };
 
       const handleSubmitMessage = (e: any) => {
         e.preventDefault();
     
         const {
           email,
+          nom,
           message,
         } = formDataMessage;
     
         const mailTo = "pab.ortg@gmail.com";
         const subject = `Message`;
-        const body = `${message}`;
+        const body = `E-mail: ${email}\nNom: ${nom}\n\n${message}`;
     
         window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(
           subject
@@ -189,6 +164,16 @@ function MeContacter() {
     const [activeTab, setActiveTab] = useState("Message");
 
     const tabs = ["Communication Animale", "Tableau de Visualisation", "Message"];
+
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const tabFromUrl = searchParams.get("tab");
+        if (tabFromUrl) {
+        setActiveTab(tabFromUrl);
+        }
+    }, [searchParams]);
+
     const tabContent: Record<string, JSX.Element> = {
         "Communication Animale": 
         <div className="w-full">
@@ -366,41 +351,6 @@ function MeContacter() {
                     </div>
 
                     <div>
-                        <label
-                            htmlFor="fichier"
-                            className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
-                        >
-                            Mon tableau de visualisation
-                        </label>
-                        <input
-                            type="file"
-                            id="fichier"
-                            name="fichier"
-                            accept="image/*"
-                            onChange={handleFileChange}
-                            className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
-                            required
-                        />
-                    </div>
-
-                    <div>
-                    <label
-                        htmlFor="citation"
-                        className="block text-xl font-medium text-black font-ttInterphasesMono tracking-wide"
-                    >
-                        Citation
-                    </label>
-                    <textarea
-                        id="citation"
-                        name="citation"
-                        rows={2}
-                        value={formDataTabVisu.citation}
-                        onChange={handleChangeTabVisu}
-                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
-                    />
-                    </div>
-
-                    <div>
                     <label
                         htmlFor="message"
                         className="block font-medium text-black font-ttInterphasesMono text-xl tracking-wide"
@@ -421,7 +371,7 @@ function MeContacter() {
                     type="submit"
                     className="w-full bg-blueDark rounded-xl py-3 text-lg font-semibold text-white border-b-4 border-blueSmoked hover:bg-blueSmoked duration-300 cursor-pointer"
                     >
-                    Commander mon tableau de visualisation
+                    Demande de tableau de visualisation
                     </button>
                 </form>
             </div>
@@ -434,6 +384,24 @@ function MeContacter() {
                     onSubmit={handleSubmitMessage}
                     className="space-y-8 lg:w-1/3 w-full z-20"
                 >
+                    <div>
+                    <label
+                        htmlFor="nom"
+                        className="block text-xl font-medium text-black font-ttInterphasesMono tracking-wide"
+                    >
+                        Nom
+                    </label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        value={formDataTabVisu.nom}
+                        onChange={handleChangeTabVisu}
+                        className="mt-1 block w-full px-4 py-2 border border-black rounded-md focus:ring focus:ring-violet-200 focus:border-violet-500"
+                        required
+                    />
+                    </div>
+
                     <div>
                     <label
                         htmlFor="email"
@@ -484,7 +452,7 @@ function MeContacter() {
         <>
         <Navbar />
         <CustomHeroBanner title="Me contacter" img="/"  />
-        <div className="flex justify-center items-center my-20">
+        <div id="formulaire"  className="flex justify-center items-center my-20">
             <div className="w-3/4 bg-white shadow-2xl rounded-2xl p-5">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 border-b pb-2">
                 {tabs.map((tab) => (

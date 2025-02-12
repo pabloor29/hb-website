@@ -9,10 +9,19 @@ function ObjectifLineConception() {
     <>
     <Navbar />
     <ImageGrid />
-    <div className="flex justify-center items-center text-2xl mb-20">
-      <p>
-        Prenez une capture d'écran pour sauvegrader !
-      </p>
+    <div className="flex flex-col justify-center items-center mb-20">
+      <div className="">
+        <p className="md:text-2xl text-xl text-center">
+          Prenez une capture d'écran pour sauvegrader !
+        </p>
+      </div>
+      <div className="mb-20 text-center md:w-1/2 w-full pt-8">
+        <a href="/me-contacter?tab=Tableau%20de%20Visualisation#formulaire" className='w-full'>
+          <button className="mt-4 w-2/3 h-14 bg-blueDark text-white px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked">
+            Demander des renseignements
+          </button>
+        </a>
+      </div>
     </div>
     <Footer />
     </>

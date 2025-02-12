@@ -45,9 +45,9 @@ function ComAnimale() {
             </div>
           </div>
           <div className="mb-20 text-center w-1/3">
-            <a href="/tableau-de-visualisation-conception" className='w-full'>
-              <button className="mt-4 md:w-2/5 w-2/3 h-14 bg-blueDark text-white px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked">
-                Me contacter !
+            <a href="/me-contacter?tab=Communication%20Animale#formulaire" className='w-full'>
+              <button className="mt-4 w-2/3 h-14 bg-blueDark text-white px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked">
+                Demander un rendez-vous
               </button>
             </a>
           </div>
