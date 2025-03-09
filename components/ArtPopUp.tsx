@@ -33,7 +33,7 @@ const ArtworkModal: React.FC<ArtworkModalProps> = ({ isOpen, onClose, title, art
   return (
     <RadixDialog.Root open={isOpen} onOpenChange={onClose}>
       <RadixDialog.Overlay className="fixed inset-0 bg-black/70" />
-      <RadixDialog.Content className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-xl shadow-lg w-3/4 max-h-[80vh] overflow-y-auto z-50">
+      <RadixDialog.Content className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-xl shadow-lg md:w-3/4 w-5/6 max-h-[80vh] overflow-y-auto z-50">
         
         {/* Titre de l'œuvre */}
         <RadixDialog.Title className="text-3xl font-bold text-center">{title}</RadixDialog.Title>

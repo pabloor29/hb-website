@@ -25,8 +25,8 @@ module.exports = {
       "9xl": "8rem",
     },
     fontFamily: {
-      SFBurlington: ["SF Burlington Script SC Italic V1 V1", "ui-serif"],
-      Montserrat: ["Montserrat", "ui-serif"],
+      Babylonica: ["Babylonica", "ui-serif"],
+      Calibri: ["Calibri", "ui-serif"],
     },
     container: {
       center: true,

@@ -5,26 +5,15 @@ function Footer() {
   return (
     <footer className="w-full bg-blueSmoked flex flex-col justify-center items-center">
       <div className="flex flex-col lg:flex-row w-5/6 lg:justify-between justify-center items-center p-4 space-y-12 lg:space-y-0">
-        <div className="lg:w-1/3 w-full text-blueDark flex flex-col items-center justify-center">
-          <h4 className="font-Montserrat text-3xl mb-3">Hélène B.B</h4>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem deserunt nam et, odit necessitatibus iusto officia ex amet consequuntur autem maxime fugit eveniet totam soluta! Nemo et officiis, ut impedit deleniti nobis id sequi ad omnis eum minima, odit minus!</p>
+        <div className="lg:w-2/5 w-full text-blueDark flex flex-col items-center justify-center">
+          <h4 className="font-Calibri text-3xl mb-3">Hélène B.B</h4>
+          <p className="font-Calibri text-justify">
+            Je suis Hélène Brodin, artiste peintre diplômée des Beaux-Arts, profondément connectée à la nature et aux animaux. Depuis l’enfance, ma sensibilité – ou plutôt mon hyper-conscience – m’a rendue attentive au vivant sous toutes ses formes. Végétarienne, je respecte profondément chaque être.
+          </p>
         </div>
-
-        <div className="lg:w-1/3 w-full text-blueDark flex flex-col items-center justify-center">
-          <h4 className="font-Montserrat text-3xl mb-3">Adresse</h4>
-          <a
-            className="flex flex-col items-center justify-center text-center hover:underline"
-            href="/"
-          >
-            --
-            <br />
-            --
-          </a>
-        </div>
-
-        <div className="lg:w-1/3 w-full text-blueDark flex flex-col items-center justify-center">
-          <h4 className="font-Montserrat text-3xl mb-3">Contact</h4>
-          <ul className="flex flex-col items-center justify-center">
+        <div className="lg:w-2/5 w-full text-blueDark flex flex-col items-center justify-center">
+          <h4 className="font-Calibri text-3xl mb-3">Contact</h4>
+          <ul className="flex flex-col items-center justify-center font-Calibri">
             <li className="flex gap-2 mb-3 hover:underline">
               <Mail />
               <a href="mailto:helenebrodin@yahoo.fr">
@@ -45,9 +34,9 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="font-SFBurlington text-5xl px-5 flex flex-col text-blueDark">
-            <h1 className="leading-none mr-8">hélène</h1>
-            <h1 className="leading-none ml-8">b.b</h1>
+        <div className="w-1/5 font-Babylonica text-5xl px-5 flex flex-col items-center text-blueDark">
+            <h1 className="leading-none">Hélène</h1>
+            <h1 className="leading-none">B.B</h1>
           </div>
       </div>
 

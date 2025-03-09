@@ -23,7 +23,7 @@ function HeroBanner() {
     <div className="h-screen w-full flex flex-col justify-center items-center">
       <div className="h-screen w-full flex justify-center items-center bg-black/60 absolute z-10"></div>
       <img
-        src="/bg-hero-banner.webp"
+        src="/banner/banner_home.webp"
         alt=""
         className="w-full h-screen object-cover absolute z-0 rotate"
       />
@@ -33,7 +33,7 @@ function HeroBanner() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="text-bigSM lg:text-bigLG text-white font-SFBurlington
+          className="text-bigSM lg:text-bigLG text-white font-Babylonica
             tracking-wide z-30 drop-shadow-[3px_3px_0_#778DA9]"
         >
           Hélène B.B
@@ -43,9 +43,11 @@ function HeroBanner() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="z-10 text-white/90 font-SFBurlington lg:text-2xl text-2xl"
+          className="z-10 text-white/90 font-Calibri lg:text-2xl"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, harum?
+          <p className="text-3xl">
+            Artiste peintre spécialisée dans la faune et la flore
+          </p>
         </motion.h3>
       </div>
     </div>

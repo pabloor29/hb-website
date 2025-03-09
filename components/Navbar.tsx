@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { AlignJustify, Utensils } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -13,7 +13,7 @@ import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
 
-const annimUnderline = "font-Montserrat text-blueDark inline-block text-xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
+const annimUnderline = "font-Calibri text-blueDark inline-block text-2xl relative cursor-pointer transition-all duration-500 before:content-[''] before:absolute before:-bottom-2 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-blueDark hover:before:w-full hover:before:opacity-100";
 
 
 const links = [
@@ -63,12 +63,12 @@ function Navbar() {
         whileInView="visible"
         viewport={{ once: true, margin: "30%" }}
         variants={Variants}
-        className="fixed w-full h-24 backdrop-blur justify-between items-center text-blueDark px-8 z-50 bg-blueSmoked/80 hidden lg:flex"
+        className="fixed w-full h-24 backdrop-blur justify-between items-center text-blueDark px-8 z-50 bg-blueSmoked/60 hidden lg:flex"
       >
         <a href="/">
-          <div className="font-SFBurlington text-4xl px-5 flex flex-col text-center hover:font-bold">
-            <h1 className="leading-none">hélène</h1>
-            <h1 className="leading-none">b.b</h1>
+          <div className="font-Babylonica text-4xl px-5 flex flex-col text-center">
+            <h1 className="leading-none">Hélène</h1>
+            <h1 className="leading-none">B.B</h1>
           </div>
         </a>
         <div>
@@ -88,7 +88,7 @@ function Navbar() {
       <div className="lg:hidden fixed top-6 z-50 flex justify-between w-full px-6">
         <Sheet key="left">
           <SheetTrigger className="overflow-hidden flex justify-center items-center w-10 h-10 rounded-full shadow">
-            <img src="/menu-2-line.png" alt="hamburger menu icon" />
+            <Menu color="#0D1B2A"/>
           </SheetTrigger>
           <SheetContent className="fixed z-50 gap-4 bg-blueSmoked p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 left-0 h-full w-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm">
             <SheetHeader>
@@ -100,7 +100,7 @@ function Navbar() {
                     className="overflow-hidden h-20 w-full flex items-center text-blueDark hover:bg-blueDark hover:text-blueSmoked rounded-xl
                      duration-300 px-5 py-3 cursor-pointer"
                   >
-                    <h3 className="w-full text-xl text-left font-Montserrat tracking-wid">
+                    <h3 className="w-full text-2xl text-left font-Calibri tracking-wid">
                       {items.label.toUpperCase()}
                     </h3>
                   </a>

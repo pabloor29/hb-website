@@ -299,9 +299,9 @@ function MeContacter() {
 
                     <button
                     type="submit"
-                    className="w-full bg-blueDark rounded-xl py-3 text-lg font-semibold text-white border-b-4 border-blueSmoked hover:bg-blueSmoked duration-300 cursor-pointer"
+                    className="w-full bg-blueDark/80 rounded-xl py-3 text-lg text-white border-b-4 border-blueDark hover:bg-blueDark duration-300 cursor-pointer"
                     >
-                    Demande de Communication animale
+                    Demande de communication animale
                     </button>
                 </form>
             </div>
@@ -369,7 +369,7 @@ function MeContacter() {
 
                     <button
                     type="submit"
-                    className="w-full bg-blueDark rounded-xl py-3 text-lg font-semibold text-white border-b-4 border-blueSmoked hover:bg-blueSmoked duration-300 cursor-pointer"
+                    className="w-full bg-blueDark/80 rounded-xl py-3 text-lg text-white border-b-4 border-blueDark hover:bg-blueDark duration-300 cursor-pointer"
                     >
                     Demande de tableau de visualisation
                     </button>
@@ -439,7 +439,7 @@ function MeContacter() {
 
                     <button
                     type="submit"
-                    className="w-full bg-blueDark rounded-xl py-3 text-lg font-semibold text-white border-b-4 border-blueSmoked hover:bg-blueSmoked duration-300 cursor-pointer"
+                    className="w-full bg-blueDark/80 rounded-xl py-3 text-lg  text-white border-b-4 border-blueDark hover:bg-blueDark duration-300 cursor-pointer"
                     >
                     Envoyer le message
                     </button>
@@ -452,7 +452,7 @@ function MeContacter() {
         <>
         <Navbar />
         <CustomHeroBanner title="Me contacter" img="/"  />
-        <div id="formulaire"  className="flex justify-center items-center my-20">
+        <div id="formulaire"  className="flex justify-center items-center py-20 bg-blueDark">
             <div className="w-3/4 bg-white shadow-2xl rounded-2xl p-5">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-3 border-b pb-2">
                 {tabs.map((tab) => (

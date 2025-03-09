@@ -61,12 +61,12 @@ function ComAnimale() {
               viewport={{ once: true, margin: "-20%" }}
               variants={imagesVariants}
             >
-              <h2 className="font-SFBurlington text-4xl mb-8">La communication animale ?</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis mollitia debitis velit minus autem blanditiis dolorem enim provident fugiat magni ab aliquam deleniti quidem earum, molestiae dicta, recusandae accusamus quibusdam. Dolorum placeat esse fugit excepturi pariatur, provident, voluptates asperiores doloremque repellat dolore a. Soluta ducimus hic enim delectus laudantium sit.
+              <h2 className="font-Calibri text-4xl mb-8">La communication animale ?</h2>
+              <p className="font-Calibri text-justify">
+                La communication animale est une forme de connexion intuitive qui permet d’échanger avec les animaux au-delà des mots et des gestes. Elle repose sur la télépathie, une capacité que chacun possède mais que peu développent pleinement. En entrant dans un état de réceptivité profonde, on peut percevoir des images, des émotions, des sensations physiques ou même des pensées provenant de l’animal. 
                 <br />
                 <br />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim blanditiis, animi, laborum laboriosam expedita sint est aspernatur nulla modi, iure aut! Quisquam provident iure facilis modi nobis, neque corrupti quos rem velit veniam tenetur nisi itaque, porro, aliquid architecto sit quis at dolores a aperiam! Eius repudiandae accusantium eveniet omnis.
+                Cette communication subtile permet de mieux comprendre leurs besoins, leurs ressentis et leur personnalité. Elle crée un lien unique entre l’humain et l’animal, favorisant l’harmonie et le respect mutuel. Bien plus qu’un simple échange, c’est une véritable immersion dans leur monde intérieur, une invitation à voir la nature avec plus de sensibilité et d’ouverture.
               </p>
             </motion.div>
             </div>
@@ -77,7 +77,7 @@ function ComAnimale() {
               viewport={{ once: true, margin: "-20%" }}
               variants={imagesVariants}
             >
-              <img className="shadow-2xl" src="/art/Loup/Loup-01.jpeg" alt="" />
+              <img className="shadow-2xl" src="/com-animale/com_animale_001.webp" alt="" />
             </motion.div>
             </div>
           </div>
@@ -89,7 +89,7 @@ function ComAnimale() {
               viewport={{ once: true, margin: "-20%" }}
               variants={imagesVariants}
             >
-              <img className="shadow-2xl" src="/art/Poisson/Poisson-01.jpeg" alt="" />
+              <img className="shadow-2xl" src="/com-animale/com_animale_002.webp" alt="" />
             </motion.div>
             </div>
             <div className="w-6/7 md:w-1/3">
@@ -99,8 +99,8 @@ function ComAnimale() {
               viewport={{ once: true, margin: "-20%" }}
               variants={imagesVariants}
             >
-              <h2 className="font-SFBurlington text-4xl mb-8">Ma méthode</h2>
-                <ul className=''>
+              <h2 className="font-Calibri text-4xl mb-8">Ma méthode</h2>
+                <ul className="font-Calibri text-justify">
                   <li>
                     1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, placeat?
                   </li>
@@ -124,7 +124,7 @@ function ComAnimale() {
             variants={imagesVariants}
           >
             <a href="/me-contacter?tab=Communication%20Animale#formulaire" className='w-full'>
-              <button className="mt-4 w-2/3 h-14 bg-blueDark text-white px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked">
+              <button className="mt-4 w-2/3 h-14 bg-blueDark/80 text-white px-4 rounded-xl border-b-4 border-blueDark hover:bg-blueDark font-Calibri text-xl">
                 Demander un rendez-vous
               </button>
             </a>

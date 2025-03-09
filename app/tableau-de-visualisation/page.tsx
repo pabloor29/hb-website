@@ -59,9 +59,17 @@ function ObjectifLine() {
             viewport={{ once: true, margin: "-20%" }}
             variants={imagesVariants}
           >
-            <h2 className="mb-2 font-SFBurlington text-4xl">TABLEAU DE VISUALISATION</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus aut quos minima velit, quibusdam quo nisi voluptatibus, soluta cum perspiciatis dolore culpa! Dolores animi id nisi fuga, rerum iusto consequuntur quaerat officiis? Vero magnam reiciendis vitae, rerum veritatis eligendi? Omnis ullam ea quasi commodi rerum tenetur eaque quaerat eligendi odit.
+            <h2 className="mb-8 font-Calibri text-4xl">Tableau de visualisation</h2>
+            <p className="font-Calibri text-justify">
+              Les tableaux de visualisation sont de puissants outils de manifestation et de connexion avec ses aspirations profondes. Ils consistent à rassembler des images, des mots, des couleurs et des symboles qui incarnent nos rêves, nos intentions et nos émotions.
+              <br />
+              En les plaçant sous nos yeux au quotidien, ils agissent comme des ancrages visuels qui stimulent notre inconscient et renforcent notre focalisation sur ce que nous souhaitons attirer dans notre vie.
+              <br />
+              <br />
+              Pour moi, chaque tableau de visualisation est une œuvre vivante, une porte ouverte vers un univers de possibilités. Il ne s’agit pas seulement d’un collage esthétique, mais d’un espace où l’énergie de nos désirs prend forme et se charge de notre intention.
+              <br />
+              <br />
+              C’est un processus intuitif et artistique, où l’on matérialise en images ce que l’on ressent au plus profond de soi, créant ainsi une connexion entre notre monde intérieur et la réalité que nous façonnons.
             </p>
           </motion.div>
           </div>
@@ -72,7 +80,7 @@ function ObjectifLine() {
             viewport={{ once: true, margin: "-20%" }}
             variants={imagesVariants}
           >
-            <img src="/art/Loup/Loup-01.jpeg" alt="" className="shadow-2xl"/>
+            <img src="/tableau-visu/tableau_visu_001.webp" alt="" className="shadow-2xl"/>
           </motion.div>
           </div>
         </div>
@@ -84,7 +92,7 @@ function ObjectifLine() {
           variants={imagesVariants}
         >
           <a href="/tableau-de-visualisation-conception" className='w-full'>
-            <button className="mt-4 md:w-2/5 w-2/3 h-14 bg-blueDark text-white px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked">
+            <button className="mt-4 md:w-2/5 w-2/3 h-14 bg-blueDark/80 text-white px-4 rounded-xl border-b-4 border-blueDark hover:bg-blueDark font-Calibri text-xl">
               Créer mon tableau de visualisation !
             </button>
           </a>

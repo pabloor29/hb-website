@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "SF Burlington Script SC Italic V1 V1";
-  src: url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.eot");
-  src: url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/6dac9149980dd5635aca11b4a911029b.svg#SF Burlington Script SC Italic V1 V1")format("svg");
+  font-family: "Babylonica";
+  src: url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.eot");
+  src: url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/763b4592ec81f8a0b7b9c6ad4cc0acc5.svg#Babylonica")format("svg");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
-  src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")format("embedded-opentype"),
-  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")format("woff2"),
-  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff")format("woff"),
-  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")format("truetype"),
-  url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")format("svg");
+  font-family: "Calibri";
+  src: url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot");
+  src: url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri")format("svg");
 }

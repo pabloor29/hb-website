@@ -49,7 +49,7 @@ const ArtworkCard: React.FC<ArtworkProps> = ({ title, artist, imageUrl, descript
           <p className="mt-2 text-sm text-gray-500">{description.substring(0, 100)}...</p>
           <button 
             onClick={() => setIsOpen(true)} 
-            className="mt-4 w-full bg-blueDark text-white py-2 px-4 rounded-xl border-b-4 border-blueSmoked hover:bg-blueSmoked"
+            className="mt-4 w-full bg-blueDark/80 text-white py-2 px-4 rounded-xl border-b-4 border-blueDark hover:bg-blueDark font-Calibri text-xl"
           >
             Voir plus
           </button>

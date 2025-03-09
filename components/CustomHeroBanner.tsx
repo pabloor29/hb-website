@@ -20,11 +20,11 @@ const textVariants: Variants = {
 function CustomHeroBanner(props: any) {
   return (
     <div className="h-screen relative">
-      <div className="w-full h-full bg-black/50 z-40 absolute"></div>
+      <div className="w-full h-full bg-black/60 z-40 absolute"></div>
       <img
         src={props.img}
         alt=""
-        className="h-full w-full object-cover absolute z-30 grayscale"
+        className="h-full w-full object-cover absolute z-30"
       />
 
       <div className="relative z-40 h-full flex flex-col items-center justify-center leading-none text-center">
@@ -33,7 +33,7 @@ function CustomHeroBanner(props: any) {
           whileInView="visible"
           viewport={{ once: true }}
           variants={textVariants}
-          className="text-7xl lg:text-bigLG text-white font-SFBurlington
+          className="text-7xl lg:text-bigLG text-white font-Babylonica
             tracking-wide z-40 drop-shadow-[3px_3px_0_#778DA9]"
         >
           {props.title}
